@@ -1,4 +1,4 @@
-####概观
+#### 概观
 Spring使创建Java企业应用程序变得容易。 它提供了在企业环境中使用Java语言所需的一切，并支持Groovy和Kotlin作为JVM上的替代语言，并可以根据应用程序的需求灵活地创建多种体系结构。 从Spring Framework 5.1开始，Spring需要JDK 8+（Java SE 8+），并提供对JDK 11 LTS的现成支持。 建议将Java SE 8更新60作为Java 8的最低修补程序版本，但通常建议使用最新的修补程序版本。
 
 Spring支持广泛的应用场景。 在大型企业中，应用程序通常存在很长时间，并且必须在升级周期不受开发人员控制的JDK和应用程序服务器上运行。 其他服务器则可以作为单个jar运行，并且服务器可以嵌入云环境中。 还有一些可能是不需要服务器的独立应用程序（例如批处理或集成工作负载）。
@@ -8,13 +8,13 @@ Spring是开源的。 它拥有一个庞大而活跃的社区，可以根据各�
 原文
 更改语言
 
-####1. 什么是“Spring”
+#### 1. 什么是“Spring”
 术语“Spring”在不同的上下文中表示不同的事物。 它可以用来指代Spring Framework项目本身，而这一切都是从这里开始的。 随着时间的流逝，已经在Spring框架之上构建了其他Spring项目。 通常，当人们说“春天”时，它们表示整个项目系列。 本参考文档重点关注基础：Spring框架本身。
 
 Spring框架分为多个模块。 应用程序可以选择所需的模块。 核心容器的模块是核心，包括配置模型和依赖项注入机制。 除此之外，Spring框架还为不同的应用程序体系结构提供了基础支持，包括消息传递，事务性数据和持久性以及Web。 它还包括基于Servlet的Spring MVC Web框架，以及并行的Spring WebFlux反应式Web框架。
 
 关于模块的注释：Spring的框架jar允许部署到JDK 9的模块路径（“拼图”）。 为了在支持Jigsaw的应用程序中使用，Spring Framework 5 jar附带了“自动模块名称”清单条目，这些清单条目定义了与jar工件无关的稳定语言级别的模块名称（“ spring.core”，“ spring.context”等）。 名称（罐子使用“-”而不是“。”（例如“ spring-core”和“ spring-context”）遵循相同的命名模式）。 当然，Spring的框架jar在JDK 8和9+的类路径上都能正常工作。
-####2. Spring 的历史和 Spring Framework
+#### 2. Spring 的历史和 Spring Framework
 响应于早期J2EE规范的复杂性，Spring于2003年应运而生。 尽管有些人认为Java EE和Spring竞争，但事实上Spring是Java EE的补充。 Spring编程模型不包含Java EE平台规范。 相反，它与EE伞中精心选择的各个规范集成在一起：
 
 Servlet API（JSR 340）
@@ -41,7 +41,7 @@ Spring框架还支持依赖注入（JSR 330）和通用注释（JSR 250）规范
 
 春天继续创新和发展。 除了Spring Framework，还有其他项目，例如Spring Boot，Spring Security，Spring Data，Spring Cloud，Spring Batch等。 重要的是要记住，每个项目都有自己的源代码存储库，问题跟踪程序和发布节奏。 有关Spring项目的完整列表，请参见
 [spring.io/projects](https://spring.io/projects)。
-####3. 设计理念
+#### 3. 设计理念
 了解框架后，不仅要了解框架的工作原理，而且要遵循的原则很重要。 以下是Spring框架的指导原则：
 
 提供每个级别的选择。 Spring使您可以尽可能推迟设计决策。 例如，您可以在不更改代码的情况下通过配置切换持久性提供程序。 对于许多其他基础架构问题以及与第三方API的集成也是如此。
@@ -53,13 +53,13 @@ Spring框架还支持依赖注入（JSR 330）和通用注释（JSR 250）规范
 关心API设计。 Spring团队投入了大量的思想和时间来制作直观，并在许多版本和很多年中都适用的API。
 
 为代码质量设置高标准。 Spring框架非常强调有意义，最新和准确的javadoc。 它是极少数可以声明干净代码结构且程序包之间没有循环依赖关系的项目之一。
-####4. 反馈和贡献
+#### 4. 反馈和贡献
 对于操作方法问题或诊断或调试问题，我们建议使用StackOverflow，并且有一个问题页面列出了要使用的建议标签。 如果您相当确定Spring框架中有问题或想提出功能，请使用[GitHub Issues](https://github.com/spring-projects/spring-framework/issues)。
 
 如果您有解决方案或建议的解决方案，可以在Github上提交拉取请求。 但是，请记住，对于除最琐碎的问题以外的所有问题，我们希望在问题跟踪器中记录故障单，在该跟踪器中进行讨论并保留记录以备将来参考。
 
 有关更多详细信息，请参阅“贡献”顶级项目页面上的准则。
-####5. 入门
+#### 5. 入门
 如果您刚刚开始使用Spring，则可能需要通过创建基于Spring Boot的应用程序来开始使用Spring Framework。 Spring Boot提供了一种快速（且自以为是）的方式来创建可用于生产环境的基于Spring的应用程序。 它基于Spring框架，更倾向于约定而不是配置，并且旨在使您尽快启动并运行。
 
 您可以使用[start.spring.io](https://start.spring.io/)生成一个基本项目，或者遵循“入门”指南之一，例如“入门RESTful Web Service的构建”。 这些指南不仅易于理解，而且非常注重任务，并且大多数基于Spring Boot。 它们还涵盖了Spring产品组合中的其他项目，您在解决特定问题时可能要考虑这些项目。
