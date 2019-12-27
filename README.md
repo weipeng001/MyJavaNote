@@ -1,6 +1,6 @@
 ### ☕Mysql基础
 
-- [MySQL创建数据库（CREATE DATABASE语句）](../docs/mysql/MySQL创建数据库.md)
+- [MySQL创建数据库（CREATE DATABASE语句）](docs/mysql/MySQL创建数据库.md)
 
 ###  ☕Spring基础  ###
 
